@@ -25,7 +25,7 @@ class InstaBot:
             sleep(2)
 
     def get_unfollowers(self):
-        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/section/div[3]/div[1]/div/div/div[2]/div[1]/div/div/a").click()
+        self.driver.find_element_by_xpath("//*[@id=\"react-root\"]/div/div/section/main/section/div[3]/div[1]/div/div/div[1]").click()
         sleep(2)
         self.driver.find_element_by_xpath("//a[contains(@href,'/following')]").click()
         following = self._get_names()
